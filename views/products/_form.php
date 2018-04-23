@@ -6,10 +6,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Products */
 /* @var $form yii\widgets\ActiveForm */
-$cats = array();
-foreach ($categories as $category) {
-    array_push($cats, $category['id']);
-}
+
 ?>
 
 <div class="products-form">
