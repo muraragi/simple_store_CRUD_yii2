@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpUnhandledExceptionInspection */
 
 use yii\helpers\Html;
 use yii\grid\GridView;
@@ -28,7 +28,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'alias',
-            'parent',
+//            'parent',
+            [
+                'attribute' => 'parent',
+                'value' => function($data){return $data->category->title;}
+            ],
             'price',
 
             ['class' => 'yii\grid\ActionColumn'],

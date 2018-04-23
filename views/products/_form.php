@@ -20,7 +20,7 @@ foreach ($categories as $category) {
 
     <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'parent')->dropDownList($cats) ?>
+    <?= $form->field($model, 'parent')->dropDownList(\yii\helpers\ArrayHelper::map(\app\models\Categories::find()->all(), 'id', 'title')) ?>
 
     <?= $form->field($model, 'price')->textInput() ?>
 
